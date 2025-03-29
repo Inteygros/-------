@@ -18,8 +18,8 @@ int main() {
     c = dt / dx;
     printf("空间步长：%lf,c:%lf", dx, c);
     double u1[n + 1], u2[n + 1], e[n + 1];//创建两个u数组用于交替迭代
-    FILE* error = fopen("LW_error.csv", "w");//误差文件
-    FILE* output = fopen("LW_output.csv", "w");//输出文件
+    FILE* error = fopen("LWS_error.csv", "w");//误差文件
+    FILE* output = fopen("LWS_output.csv", "w");//输出文件
 
     for (int i = 0; i <= n; i++) {
         u1[i] = sin(2 * PI * i * dx);
@@ -71,7 +71,7 @@ int main() {
 
     fclose(output);
     fclose(error);
-    printf("\n数据已保存到LW_output.csv和LW_error.csv\n");
+    printf("\n数据已保存到LWS_output.csv和LWS_error.csv\n");
 
     return 0;
 }
