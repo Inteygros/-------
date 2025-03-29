@@ -17,7 +17,7 @@ int main(){
     dx = double(3)/double(n);
     c = dt/dx;
     printf("空间步长：%lf,c:%lf",dx,c);
-    double u[n],e[n];
+    double u[n+1],e[n+1];
     FILE *error = fopen("error.csv", "w");//误差文件
     FILE *output = fopen("output.csv", "w");//输出文件
 
