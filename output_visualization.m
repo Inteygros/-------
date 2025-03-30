@@ -1,4 +1,4 @@
-output = readmatrix('output\FOUS_output_dt=0.0100_dx=0.0097.csv');   % 根据需要修改
+output = readmatrix('output\FOUS_output_dt=0.0100_dx=0.0300.csv');   % 根据需要修改文件名
 
 [T, N] = size(output);
 x = linspace(0, 3, N);
@@ -16,7 +16,7 @@ h_sim = plot(x, output(1, :), 'b-');  % 数值解图形句柄h_sim（蓝色）
 
 xlabel('x');
 ylabel('u');
-title(sprintf('时间: %.4f', t_current));
+title(sprintf('时间: %.4f', t_current));  %标题
 legend('数值解', '解析解', 'Location', 'northeast');  %标注
 axis([0 3 -1.2 1.2]);        % 固定坐标轴范围
 grid on;

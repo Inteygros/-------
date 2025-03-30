@@ -8,6 +8,7 @@ double FirstOrderUpwindScheme_error(double dt, int n) {
     dx = double(3) / double(n);
     double u[n + 1];
 
+    //初始值
     for (int i = 0; i <= n; i++) {
         u[i] = sin(2 * PI * i * dx);
     }
@@ -23,7 +24,7 @@ double FirstOrderUpwindScheme_error(double dt, int n) {
     //计算误差的平方和
     double sum = 0;
     for (int i = 0; i <= n; i++) {
-        sum += (u[i] - sin(2 * PI * (i * dx - 10))) * (u[i] - sin(2 * PI * (i * dx - 10)));
+        sum += (u[i] - sin(2 * PI * (i * dx - 1))) * (u[i] - sin(2 * PI * (i * dx - 1)));
     }
 
     return sqrt(sum / n);
@@ -32,9 +33,9 @@ double FirstOrderUpwindScheme_error(double dt, int n) {
 int main() {
     double dt;//dt初始时间步长
     int n;//初始空间网格等分数
-    printf("请输入时间步长：");
+    printf("请输入初始时间步长：");
     scanf("%lf", &dt);
-    printf("请输入空间网格等分数：");
+    printf("请输入初始空间网格等分数：");
     scanf("%d", &n);
     double dx = double(3) / double(n);//初始网格间距
     double c = dt / dx;

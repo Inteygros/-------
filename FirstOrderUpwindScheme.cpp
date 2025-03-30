@@ -27,6 +27,7 @@ int main() {
 
     FILE* output = fopen(filename, "w");//输出文件
 
+    //初始值
     for (int i = 0; i <= n; i++) {
         u[i] = sin(2 * PI * i * dx);
     }
