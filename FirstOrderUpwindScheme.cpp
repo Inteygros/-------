@@ -16,7 +16,7 @@ int main() {
     scanf("%d", &n);
     dx = double(3) / double(n);
     c = dt / dx;
-    printf("空间步长：%lf,c:%lf", dx, c);
+    printf("空间步长：%lf, c:%lf", dx, c);
     double u[n + 1];
 
     // 定义文件名
@@ -41,9 +41,9 @@ int main() {
 
         //记录输出
         for (int i = 0; i < n; i++) {
-            fprintf(output, "%.10e ", u[i]);
+            fprintf(output, "%lf ", u[i]);
         }
-        fprintf(output, "%.10e\n", u[n]);
+        fprintf(output, "%lf\n", u[n]);
     }
 
     fclose(output);

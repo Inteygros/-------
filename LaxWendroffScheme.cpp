@@ -32,7 +32,7 @@ int main() {
     }
 
     //计算10个时间单位， 自动计算循环次数
-    for (int j = 1; j <= round(double(10)/dt); j++) {
+    for (int j = 1; j <= round(double(10) / dt); j++) {
         //奇数次
         if (j % 2 != 0) {
             for (int i = 1; i < n; i++) {
@@ -44,9 +44,9 @@ int main() {
 
             //记录输出
             for (int i = 0; i < n; i++) {
-                fprintf(output, "%.10e ", u2[i]);
+                fprintf(output, "%lf ", u2[i]);
             }
-            fprintf(output, "%.10e\n", u2[n]);
+            fprintf(output, "%lf\n", u2[n]);
         }
         //偶数次
         else {
@@ -59,9 +59,9 @@ int main() {
 
             //记录输出，记录误差
             for (int i = 0; i < n; i++) {
-                fprintf(output, "%.10e ", u1[i]);
+                fprintf(output, "%lf ", u1[i]);
             }
-            fprintf(output, "%.10e\n", u1[n]);
+            fprintf(output, "%lf\n", u1[n]);
         }
     }
 
