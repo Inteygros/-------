@@ -1,4 +1,4 @@
-output = readmatrix('output\FOUS_output_dt=0.0100_dx=0.0300.csv');   % 根据需要修改文件名
+output = readmatrix('output\FOUS_output_dt=0.0100_dx=0.0300.csv');   % 根据需要修改文件名(FOUS/LWS/UWBS和dt、dx)
 
 [T, N] = size(output);
 x = linspace(0, 3, N);

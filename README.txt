@@ -1,0 +1,1 @@
+运行"xxxScheme.cpp"对不同数值格式进行数值模拟，输出文件在output文件夹；运行"xxxScheme_PrecisionAnalysis.cpp"计算不同数值格式的精度。运行"output_visualization.m"以实现可视化！（注意："output_visualization.m"中第一行需要修改文件名以匹配文件）
